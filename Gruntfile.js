@@ -19,12 +19,12 @@ module.exports = function (grunt) {
 
     meta: {
       banner: '/**\n' +
-      ' * <%= pkg.description %>\n' +
-      ' * @version v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
-      ' * @link <%= pkg.homepage %>\n' +
-      ' * @author <%= pkg.author.name %> <<%= pkg.author.email %>>\n' +
-      ' * @license MIT License, http://www.opensource.org/licenses/MIT\n' +
-      ' */\n'
+        ' * <%= pkg.description %>\n' +
+        ' * @version v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+        ' * @link <%= pkg.homepage %>\n' +
+        ' * @author <%= pkg.author.name %> <<%= pkg.author.email %>>\n' +
+        ' * @license MIT License, http://www.opensource.org/licenses/MIT\n' +
+        ' */\n'
     },
 
     //
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 
     clean: ['<%= dirs.dist %>'],
 
-    concat: {  // grunt-contrib-concat
+    concat: { // grunt-contrib-concat
       options: {
         banner: '<%= meta.banner %>'
       },
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
       }
     },
 
-    connect: {  // grunt-contrib-connect
+    connect: { // grunt-contrib-connect
       dev: {
         options: {
           port: 9999,
@@ -73,7 +73,7 @@ module.exports = function (grunt) {
       }
     },
 
-    cssmin: {  // grunt-contrib-cssmin
+    cssmin: { // grunt-contrib-cssmin
       combine: {
         files: {
           '<%= dirs.dist %>/<%= pkg.name %>.min.css': ['<%= dirs.dist %>/<%= pkg.name %>.css']
@@ -81,7 +81,7 @@ module.exports = function (grunt) {
       }
     },
 
-    jshint: {  // grunt-contrib-jshint
+    jshint: { // grunt-contrib-jshint
       all: [
         'Gruntfile.js',
         '<%= dirs.src %>/**/*.js',
@@ -92,14 +92,14 @@ module.exports = function (grunt) {
       }
     },
 
-    karma: {  // grunt-karma
+    karma: { // grunt-karma
       single: {
         configFile: 'karma-unit.conf.js',
         singleRun: true
       }
     },
 
-    ngmin: {  // grunt-ngmin
+    ngmin: { // grunt-ngmin
       dist: {
         files: [{
           expand: true,
@@ -110,7 +110,7 @@ module.exports = function (grunt) {
       }
     },
 
-    ngtemplates: {  // grunt-angular-templates
+    ngtemplates: { // grunt-angular-templates
       all: {
         src: '<%= dirs.tmpl %>/**.tmpl',
         dest: '<%= dirs.tmpl %>/cache.js',
@@ -131,20 +131,20 @@ module.exports = function (grunt) {
       }
     },
 
-    open: {  // grunt-open
+    open: { // grunt-open
       demo: {
         path: 'http://localhost:9999/'
       }
     },
 
-    release: {  // grunt-release
+    release: { // grunt-release
       options: {
         file: 'bower.json',
         npm: false
       }
     },
 
-    uglify: {  // grunt-contrib-uglify
+    uglify: { // grunt-contrib-uglify
       options: {
         banner: '<%= meta.banner %>'
       },
@@ -154,7 +154,7 @@ module.exports = function (grunt) {
       }
     },
 
-    watch: {  // grunt-contrib-watch
+    watch: { // grunt-contrib-watch
       src: {
         files: [
           '<%= dirs.src %>/*.js',
