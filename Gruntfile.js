@@ -39,11 +39,11 @@ module.exports = function (grunt) {
       },
       js: {
         src: ['<%= dirs.src %>/*.js', '<%= dirs.tmpl %>/cache.js'],
-        dest: '<%= dirs.dist %>/<%= pkg.name %>.js'
+        dest: '<%= dirs.dist %>/<%= pkg.fileOutName %>.js'
       },
       css: {
         src: ['<%= dirs.src %>/*.css'],
-        dest: '<%= dirs.dist %>/<%= pkg.name %>.css'
+        dest: '<%= dirs.dist %>/<%= pkg.fileOutName %>.css'
       }
     },
 
@@ -64,8 +64,8 @@ module.exports = function (grunt) {
           expand: true,
           flatten: true,
           src: [
-            '<%= dirs.dist %>/<%= pkg.name %>.js',
-            '<%= dirs.dist %>/<%= pkg.name %>.css'
+            '<%= dirs.dist %>/<%= pkg.fileOutName %>.js',
+            '<%= dirs.dist %>/<%= pkg.fileOutName %>.css'
           ],
           dest: '<%= dirs.demo %>/',
           filter: 'isFile'
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
     cssmin: { // grunt-contrib-cssmin
       combine: {
         files: {
-          '<%= dirs.dist %>/<%= pkg.name %>.min.css': ['<%= dirs.dist %>/<%= pkg.name %>.css']
+          '<%= dirs.dist %>/<%= pkg.fileOutName %>.min.css': ['<%= dirs.dist %>/<%= pkg.fileOutName %>.css']
         }
       }
     },
@@ -149,8 +149,8 @@ module.exports = function (grunt) {
         banner: '<%= meta.banner %>'
       },
       dist: {
-        src: ['<%= dirs.dist %>/<%= pkg.name %>.js'],
-        dest: '<%= dirs.dist %>/<%= pkg.name %>.min.js'
+        src: ['<%= dirs.dist %>/<%= pkg.fileOutName %>.js'],
+        dest: '<%= dirs.dist %>/<%= pkg.fileOutName %>.min.js'
       }
     },
 
