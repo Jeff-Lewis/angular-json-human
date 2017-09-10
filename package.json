@@ -3,20 +3,18 @@
     "name": "Brian Park",
     "email": "yaru22@gmail.com"
   },
-  "contributors": [
-    {
-      "name": "Jeff Lewis"
-    }
-  ],
+  "contributors": [{
+    "name": "Jeff Lewis"
+  }],
   "name": "jl-angular-json-human",
   "fileOutName": "angular-json-human",
   "description": "Angular directive to convert JSON into human readable table. Inspired by https://github.com/marianoguerra/json.human.js.",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "license": "MIT",
-  "homepage": "https://github.com/yaru22/angular-json-human",
+  "homepage": "https://github.com/jeff-Lewis/jl-angular-json-human",
   "repository": {
     "type": "git",
-    "url": "git://github.com/yaru22/angular-json-human.git"
+    "url": "git://github.com/jeff-Lewis/jl-angular-json-human.git"
   },
   "files": [
     "dist/",

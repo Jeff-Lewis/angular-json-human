@@ -5,7 +5,7 @@
   },
   "name": "jl-angular-json-human",
   "description": "Angular directive to convert JSON into human readable table. Inspired by https://github.com/marianoguerra/json.human.js.",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "license": "MIT",
   "homepage": "https://github.com/Jeff-Lewis/jl-angular-json-human",
   "repository": {
@@ -13,8 +13,8 @@
     "url": "git://github.com/Jeff-Lewis/jl-angular-json-human.git"
   },
   "main": [
-    "dist/jl-angular-json-human.js",
-    "dist/jl-angular-json-human.css"
+    "dist/angular-json-human.js",
+    "dist/angular-json-human.css"
   ],
   "ignore": [
     ".editorconfig",
